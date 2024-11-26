@@ -63,7 +63,7 @@ public class SinglyLinkedList {
             prev = current;
             current = current.next;
         }
-        if (current == null){
+        if (current.next == null){
             System.out.println("element not found");
             return;
         }
@@ -95,10 +95,13 @@ public class SinglyLinkedList {
             prev.next = null;
 
     }
+    public void print(){
+        while (head != null){
+            System.out.println(head.data);
+        }
+    }
     public void clear(){
         head = null;
         size = 0;
     }
-
-
 }
